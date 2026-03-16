@@ -1,0 +1,26 @@
+<h1>Post Run</h1>
+<select [(ngModel)]="player1">
+  <option *ngFor="let player of players" [value]="player">{{player}}</option>
+</select>
+<select [(ngModel)]="character1">
+  <option *ngFor="let character of characters" [value]="character">{{character}}</option>
+</select>
+<br>
+<select [(ngModel)]="player2">
+  <option *ngFor="let player of players" [value]="player">{{player}}</option>
+</select>
+<select [(ngModel)]="character2">
+  <option *ngFor="let character of characters" [value]="character">{{character}}</option>
+</select>
+<br>
+<label>Floors Cleared</label>
+<input>
+<label>Win</label>
+<input type="checkbox" [(ngModel)]="won">
+<label>Difficulty</label>
+<select [(ngModel)]="difficulty">
+  <option *ngFor="let difficulty of difficulties" [value]="difficulty">{{difficulty}}</option>
+</select>
+<div class="button-div">
+  <button (click)="submitRun()">Post</button>
+</div>
